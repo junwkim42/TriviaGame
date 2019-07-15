@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var correctcount = 0;
     var wrongcount = 0;
-    var t = 10;
+    var t = 120;
     var inter;
 
     function counter(){
@@ -12,9 +12,9 @@ $(document).ready(function(){
         }
     }
     function gamestart(){
-        $("body").prepend(`<div id="timebody">Remaining time (seconds) : 120</div>`);
         $("#gamebody").prepend(
-        `<form>
+        `<div id="timebody">Remaining time (seconds) : 120</div>
+        <form>
             <p>test question:</p>
             <input type="radio" name="0" value="false"> test<br>
             <input type="radio" name="0" value="true"> right<br>
@@ -61,7 +61,6 @@ $(document).ready(function(){
         $("#finish").show();
     }
     function gameover(){
-
         for(var i = 0; i < 10; i++){
             var name = "input[name=" + i + "]:checked";
             if ($(name).val() == "true"){
@@ -73,7 +72,8 @@ $(document).ready(function(){
         }
         clearInterval(inter);
         $("#result").html(`<div> Correct Answers : ${correctcount} </div><div> Wrong Answers : ${wrongcount} </div>`);
-        $("#gamebody").html("");
+        $("form").remove();
+        $("#finish").remove();
         $("#timebody").html("Finished! Good job!");
     }
     $("#finish").hide();

@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One|Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Totally Trivial</title>
 </head>
 <body>
-    <div id="gamebody">
-        <button id="start">Start</button>
-        <button id="finish">Finish</button>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style="background-color: #F7E665";>
+            <h1>Totally Trivial Trivia!</h1>
+        </div>
+        <div class="col-md-2"></div>
     </div>
-    <div id="result"></div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" id="gamebody">
+            <button id="start" class="btn btn-primary btn-lg btn-block">Start</button>
+    
+            <button id="finish" class="btn btn-success btn-lg btn-block">Finish</button>
+            <div id="result"></div>
+        </div>
+        <div class="col-md-2"></div>    
+    </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
